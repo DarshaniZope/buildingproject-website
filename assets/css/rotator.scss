@@ -1,0 +1,232 @@
+@import "compass/css3";
+
+/***************
+****************
+** Variables *** 
+****************
+****************/
+
+$white: #fff;
+$irty-white: #EEEEEE;
+$light-grey: #DADADA;
+$medium-grey: #B2B2B2;
+$headline-grey: #333;
+$grey: #4B4C51;
+$dark-grey: #393C43;
+$marine: #74D9D0;
+$dark-marine:#36C2B5;
+#main-content #services,
+#main-content #work,
+#main-content #blog,
+#main-content #about,
+#main-content #contacts {
+    padding: 20px 0;
+}
+
+.divider {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 10px auto 20px;
+    background-color: $marine;
+}
+
+.headline {
+    color: #999;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+/**************
+***************
+**** #home ****
+***************
+***************/
+
+#home {
+    background: url(http://miukimiu.com/dummy/patterns/diamond_upholstery.png) repeat;
+    display: block;
+    color: #fff;
+}
+
+#home h2 {
+    color: $white;
+}
+
+#home .home-logo {
+    padding: 20px 0;
+    z-index: 999;
+    width: 177px;
+    height: 81px;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    margin-left: -88.5px;
+}
+
+#home .home-logo h1 a {
+    font-family: $title_font;
+    font-size: 50px;
+    display: block;
+    color: #fff;
+    &:hover {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+}
+
+#home .home-content h1 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#home .home-content h2 {
+    font: 20px/1 $base_font;
+    text-transform: uppercase;
+    border-top: 1px solid #fff;
+    text-align: center;
+    padding-top: 20px;
+    width: 50%;
+    left: 25%;
+    position: relative;
+}
+
+.home-semicircle-outer {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 250px;
+    width: 500px;
+    display: block;
+    @include border-radius ( 500px 500px 0 0);
+    z-index: 1;
+    margin-top: 20px;
+    left: 50%;
+    margin-left: -250px;
+    /* box-shadow: inset 0 3px 10px rgba(0, 0, 0, .1), 0 2px 20px rgba(255, 255, 255, 0.2);*/
+}
+
+.home-semicircle-inner {
+    background-color: $marine;
+    height: 125px;
+    width: 250px;
+    display: block;
+    -moz-border-radius: 125px 125px 0 0;
+    -webkit-border-radius: 125px 125px 0 0;
+    border-radius: 125px 125px 0 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: 125px;
+    z-index: 3;
+}
+
+#home-semicircle-pointer {
+    width: 160px;
+    border-bottom: 20px solid $marine;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: 130px;
+    z-index: 2;
+    @include transform-origin(100%, 50%);
+}
+
+
+/* Home info */
+
+.home-info-outer {
+    background: $marine;
+    position: relative;
+    top: 0px;
+    z-index: 5;
+}
+
+.home-info {
+    padding: 20px 0;
+    min-height: 180px;
+}
+
+.home-info-block {
+    display: none;
+}
+
+#home nav {}
+
+#home nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+}
+
+#home li a:hover,
+#home li.active a {
+    text-decoration: none;
+}
+
+#home nav a {
+    font: 400 18px/1 $base_font;
+    text-transform: uppercase;
+    color: $marine;
+}
+
+#home nav ul li {
+    display: inline-block;
+}
+
+#home .first-position {
+    position: relative;
+    left: -15px;
+    top: 180px;
+}
+
+.first-rotation {
+    @include transform ( rotate(26deg));
+}
+
+#home .second-position {
+    position: relative;
+    left: -40px;
+    top: 115px;
+}
+
+.second-rotation {
+    @include transform ( rotate(40deg));
+}
+
+#home .third-position {
+    position: relative;
+    left: -10px;
+    top: 60px;
+}
+
+.third-rotation {
+    @include transform ( rotate(90deg));
+}
+
+#home .fourth-position {
+    position: relative;
+    left: 0px;
+    top: 115px;
+}
+
+.fourth-rotation {
+    @include transform ( rotate(128deg));
+}
+
+#home .fifth-position {
+    position: relative;
+    left: -20px;
+    top: 180px;
+}
+
+.fifth-rotation {
+    @include transform ( rotate(156deg));
+}
+
+.ease-rotation {
+    @include transition (all 0.5s ease-out);
+}
